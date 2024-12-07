@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.imgbox_full,
+.imgbox {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.imgbox_full img,
+.imgbox img {
+  width: 100%;
+  height: auto;
+}
+
+.imgbox_full {
+  height: 100%;
+}
+.imgbox_full img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* {
+  cursor: default;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #1d1d1d;
+  color: #000;
+  position: static;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+select,
+input,
+button:focus {
+  outline: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.j_card_grid_section {
+  padding: 120px 0;
+  color: #fff;
+  overflow: hidden;
+}
+.j_card_grid_section .grid_row {
+  display: grid;
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+.j_card_grid_section .j_card {
+  background-color: red;
+  background-image: url("./../image/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 36px 30px;
+  border-radius: 24px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  height: 100%;
+  position: relative;
+}
+.j_card_grid_section .j_card .card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 130px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.j_card_grid_section .j_card .card_content .top_content .count_badge {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 80px;
+  display: block;
+  padding: 0 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+.j_card_grid_section .j_card .card_content .top_content .text_content .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.j_card_grid_section .j_card .card_content .top_content .text_content .pera {
+  font-size: 16px;
+  font-weight: 400;
+}
+.j_card_grid_section .j_card .card_content .bottom_content .j_button {
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.j_card_grid_section .j_card .card_content .bottom_content .j_button svg {
+  width: 100%;
+  height: 100%;
+}
+.j_card_grid_section .j_card .card_content .bottom_content .j_button, .j_card_grid_section .j_card .card_content .bottom_content .j_button * {
+  cursor: pointer;
+}
+.j_card_grid_section .j_card::before {
+  content: "";
+  width: 110%;
+  height: 100%;
+  background-image: url("./../image/shape.png");
+  background-position: left bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translate(-50%, 0);
+  z-index: 0;
+  transition: all linear 350ms;
+  opacity: 0;
+  visibility: hidden;
+}
+.j_card_grid_section .j_card:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  .j_card_grid_section .grid_row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.j_spacer {
+  height: 100vh;
+}
+
+.j_curve_chart_section {
+  padding: 120px 0;
+  --color-greay: #383838;
+  --color-orange: #fe5d2f;
+}
+.j_curve_chart_section .content_wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+.j_curve_chart_section .content_wrapper .chart_svg {
+  padding-bottom: 280px;
+}
+.j_curve_chart_section .content_wrapper .chart_svg #path-full {
+  stroke: var(--color-greay);
+}
+.j_curve_chart_section .content_wrapper .chart_svg #path-highlight {
+  stroke: var(--color-orange);
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 0 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card {
+  position: relative;
+  padding: 10px 0;
+  height: 40%;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .count {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .title {
+  --size: 26px;
+  font-size: var(--size);
+  line-height: var(--size);
+  height: 30px;
+  color: #fff;
+  overflow: hidden;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .title span {
+  display: block;
+  transition: all 350ms;
+  margin-bottom: 4px;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .title span:nth-last-child(1) {
+  color: var(--color-orange);
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .pera {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 350ms;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0%, -100%);
+  width: 1px;
+  height: 50px;
+  background-color: var(--color-greay);
+  transition: all 350ms;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .bar .dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-greay);
+  transition: all 350ms;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.tow {
+  --max-height: 100px;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.three {
+  --max-height: 270px;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.four {
+  --max-height: 420px;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.five {
+  --max-height: 340px;
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.active .content_card .title span {
+  transform: translateY(calc(-1 * var(--size) - 4px));
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.active .content_card .pera {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.active .content_card .bar {
+  background-color: var(--color-orange);
+}
+.j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.active .content_card .bar .dot {
+  border: 1px solid var(--color-orange);
+}
+
+@media only screen and (max-width: 1300px) {
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper {
+    padding: 0 40px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .title {
+    --size: 20px;
+    height: 24px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .bar {
+    height: 60px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.tow {
+    --max-height: 100px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.three {
+    --max-height: 200px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.four {
+    --max-height: 300px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.five {
+    --max-height: 250px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper {
+    padding: 0 40px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .title {
+    --size: 14px;
+    height: 18px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box .content_card .bar {
+    height: 60px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.tow {
+    --max-height: 100px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.three {
+    --max-height: 200px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.four {
+    --max-height: 300px;
+  }
+  .j_curve_chart_section .content_wrapper .chart_btn_wrapper .btn_box.five {
+    --max-height: 250px;
+  }
+}/*# sourceMappingURL=main.css.map */

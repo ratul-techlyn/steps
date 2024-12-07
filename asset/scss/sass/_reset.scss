@@ -1,0 +1,31 @@
+*{
+    cursor: default;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #1d1d1d;
+    color: #000;
+    position: static;
+    scroll-behavior: smooth;
+    font-family: $Inter;
+}
+select,
+input,
+button:focus{
+    outline: none;
+}
+ul,
+ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
