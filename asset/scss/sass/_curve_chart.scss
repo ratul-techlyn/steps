@@ -83,7 +83,7 @@
             top: 0;
             transform: translate(0%, -100%);
             width: 1px;
-            height: 50px;
+            height: 40px;
             background-color: var(--color-greay);
             transition: all 350ms;
 
@@ -145,6 +145,9 @@
 @media only screen and (max-width: 1300px) {
   .j_curve_chart_section {
     .content_wrapper {
+      .chart_svg{
+        padding-bottom: 350px;
+      }
       .chart_btn_wrapper {
         padding: 0 40px;
         .btn_box {
@@ -154,7 +157,7 @@
               height: 24px;
             }
             .bar {
-              height: 60px;
+              height: 40px;
             }
           }
 
@@ -178,31 +181,38 @@
 
 @media only screen and (max-width: 992px) {
   .j_curve_chart_section {
+    padding: 100px 0 250px;
     .content_wrapper {
+      .chart_svg{
+        padding-bottom: 200px;
+      }
+
       .chart_btn_wrapper {
         padding: 0 40px;
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+        width: 100%;
+
         .btn_box {
-          .content_card {
-            .title {
-              --size: 14px;
-              height: 18px;
-            }
-            .bar {
-              height: 60px;
+          position: absolute;
+          width: calc(100% - 80px);
+          max-width: 300px;
+          left: 40px;
+          top: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 350ms;
+
+          .content_card{
+            height: 50%;
+            .bar{
+              display: none;
             }
           }
 
-          &.tow {
-            --max-height: 100px;
-          }
-          &.three {
-            --max-height: 200px;
-          }
-          &.four {
-            --max-height: 300px;
-          }
-          &.five {
-            --max-height: 250px;
+          &.active{
+            opacity: 1;
+            visibility: visible;
           }
         }
       }

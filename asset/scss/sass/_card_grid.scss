@@ -113,6 +113,14 @@
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .j_card_grid_section {
+    .grid_row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .j_card_grid_section {
     .grid_row {

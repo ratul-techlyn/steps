@@ -8,7 +8,7 @@ const tl1 = gsap.timeline({
     trigger: "#chart_svg_main",
     start: "top center",
     end: "bottom center",
-    scrub: 1,
+    scrub: true,
     onUpdate: (self) => {
       const progress = self.progress;
       const totalSegments = positions.length;
@@ -43,10 +43,15 @@ tl1
     },
     "<"
   )
-  .fromTo(".chart_btn_wrapper .btn_box.tow .content_card .bar", { height: "50px" }, { height: "var(--max-height)" })
-  .fromTo(".chart_btn_wrapper .btn_box.three .content_card .bar", { height: "50px" }, { height: "var(--max-height)" }, "<")
-  .fromTo(".chart_btn_wrapper .btn_box.four .content_card .bar", { height: "50px" }, { height: "var(--max-height)" }, "<")
-  .fromTo(".chart_btn_wrapper .btn_box.five .content_card .bar", { height: "50px" }, { height: "var(--max-height)" }, "<");
+  .fromTo(".chart_btn_wrapper .btn_box.tow .content_card .bar", { height: "40px" }, { height: "90px" },"<")
+  .fromTo(".chart_btn_wrapper .btn_box.three .content_card .bar", { height: "40px" }, { height: "250px" }, "<")
+  .fromTo(".chart_btn_wrapper .btn_box.four .content_card .bar", { height: "40px" }, { height: "400px" }, "<")
+  .fromTo(".chart_btn_wrapper .btn_box.five .content_card .bar", { height: "40px" }, { height: "320px" }, "<");
+
+  // .fromTo(".chart_btn_wrapper .btn_box.tow .content_card .bar", { height: "50px" }, { height: "var(--max-height)" })
+  // .fromTo(".chart_btn_wrapper .btn_box.three .content_card .bar", { height: "50px" }, { height: "var(--max-height)" }, "<")
+  // .fromTo(".chart_btn_wrapper .btn_box.four .content_card .bar", { height: "50px" }, { height: "var(--max-height)" }, "<")
+  // .fromTo(".chart_btn_wrapper .btn_box.five .content_card .bar", { height: "50px" }, { height: "var(--max-height)" }, "<");
 
 // Button Interactivity
 const positions = ["0% 15%", "18% 35%", "39% 55%", "60% 75%", "80% 100%"];
