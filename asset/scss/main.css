@@ -315,7 +315,7 @@ a:hover {
 }
 @media only screen and (max-width: 992px) {
   .j_curve_chart_section {
-    padding: 100px 0 250px;
+    padding: 100px 0 200px;
   }
   .j_curve_chart_section .content_wrapper .chart_svg {
     padding-bottom: 200px;
